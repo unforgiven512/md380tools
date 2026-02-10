@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
@@ -64,7 +64,7 @@ for idx, item in enumerate(data):
             if not content:
                 print("List with special IDs empty!\n")
             # Handle servers which answer with HTTP 200 but give file not found
-            elif "DOCTYPE" in content:
+            elif b"DOCTYPE" in content:
                 print("List with special IDs not found!\n")
             else:
                 print(content)
